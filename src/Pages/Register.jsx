@@ -57,7 +57,7 @@ function Register() {
         try{
             setLoading(true)
 
-            const response = await axios.post('http://localhost:8000/api/auth/register', userData)
+            const response = await axios.post('https://blogappbe-ol6g.onrender.com/api/auth/register', userData)
             if(response.status===200){
                 alert('Registration successful')
                 navigate('/Login')

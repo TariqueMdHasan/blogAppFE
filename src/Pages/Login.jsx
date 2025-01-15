@@ -47,12 +47,12 @@ function Login() {
         try {
             setLoading(true)
 
-            const response = await axios.post('http://localhost:8000/api/auth/login', userData)
+            const response = await axios.post('https://blogappbe-ol6g.onrender.com/api/auth/login', userData)
             if (response.status === 200) {
                 alert('Login successful')
                 localStorage.setItem('authToken', response.data.token)
                 // navigate('/Login')
-                navigate('/Profile')
+                navigate('/Home')
             } else {
                 alert('Login failed')
             }
